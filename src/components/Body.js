@@ -2,9 +2,6 @@ import React from 'react';
 import Images from './Image'
 import './styles/Body.css';
 
-  // let response = fetch("https://pixabay.com/api/?key=13304993-75bbe84ca66872b048431504a&q=fox&image_type=photo")
-  // {response.then(res=>{res.forEach(element => {
-  //         <img  src={element.largeImageURL}/>})
 
 
 class Body extends React.Component{ 
@@ -28,11 +25,11 @@ class Body extends React.Component{
         return (
           <>
         <div className="content-body">
-            
+            <ul>
            {this.state.images.map(function(item,index){
              return <Images key={index} url={item.largeImageURL}/>
            })}
-            
+            </ul>
     </div> 
         </>
     );
