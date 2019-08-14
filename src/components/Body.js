@@ -8,13 +8,31 @@ import './styles/Body.css';
 
 
 class Body extends React.Component{ 
+  constructor(){
+    super();
+    this.state = {images : []}
+  }
 
+  componentDidMount(){
+    this.getImages();
+  }
+
+  getImages(){
+    fetch("https://pixabay.com/api/?key=13304993-75bbe84ca66872b048431504a&q=fox&image_type=photo")
+    .then(res => res.json())
+    .then(res=>{
+      
+      this.setState({images: res.hits})})
+  }
     render() {
         return (
           <>
         <div className="content-body">
-            <p>olitas</p>
-            <Images url="https://pixabay.com/get/57e9d24a4e56a914f6da8c7dda79367d163fdaec5a526c4870297ed3944ecd59bf_1280.jpg"/>
+            
+           {this.state.images.map(function(item,index){
+             return <Images key={index} url={item.largeImageURL}/>
+           })}
+            
     </div> 
         </>
     );
