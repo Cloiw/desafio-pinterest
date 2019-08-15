@@ -7,79 +7,105 @@ import './styles/Body.css';
 class Body extends React.Component{ 
   constructor(){
     super();
-    this.state = {images : [], perpage: 20, page:1, urls : []}
+    this.state = {images : [],urls : [],viewModal:false,viewImages:true}
     this.handleScroll = this.handleScroll.bind(this);
+    this.loadingImages = false;
+    this.currentPage = 1;
   }
 
   handleScroll(){
     const docHeight = document.body.offsetHeight
     const windowBottom = window.innerHeight + window.scrollY
-   
     
     if (windowBottom >= docHeight-10) {
-      console.log(windowBottom)
-      console.log(docHeight)
-      console.log("ola")
       return this.getImages();
       };
-      
     }
-    
-  
   
 
   componentDidMount(){
-     this.getImages(1);
+    this.getImages();
     window.addEventListener("scroll", this.handleScroll);
-    
-    
   }
- 
-  componentDidUpdate() {
-    window.addEventListener("scroll", this.handleScroll);
+
+  componentDidUpdate(prevProps,prevState){
+    if(prevState.urls.length !== this.state.urls.length){
+      this.loadingImages = false;
+    }
   }
 
   getImages(){
-    fetch("https://pixabay.com/api/?key=13304993-75bbe84ca66872b048431504a&q=fox&per_page="+this.state.perpage+"&page="+this.state.page+"&image_type=photo")
+    if(this.loadingImages === true){
+      return;
+    }
+
+    this.loadingImages = true;
+    fetch("https://pixabay.com/api/?key=13304993-75bbe84ca66872b048431504a&q=fox&per_page=20&page="+this.currentPage+"&image_type=photo")
     .then(res => res.json())
     .then(res=>{
-      
-      let stateImages = [...this.state.images]
-      let all = stateImages.concat(res.hits)
-      let urlsA = all.map(function(item,index){
-        return item.largeImageURL
+      let newLinks = res.hits.map(function(item, index) {
+      return item.largeImageURL
       })
-      console.log(stateImages)
-      console.log(all)
-      console.log(urlsA)
-      const unique =  [...new Set(urlsA)];
-      console.log(unique)
-      
-     
-      
-      
 
+      let stateUrls = [...this.state.urls]
+      let allLinks = stateUrls.concat(newLinks)
+      this.currentPage++;
+      this.setState({urls:allLinks,images:res.hits});
       
-      
-      if(this.state.images !== []){
-        
-      return this.setState({urls: urlsA ,perpage:(this.state.perpage+20),page:(this.state.page++)})
-      }
-      
-      return this.setState({images: this.state.images,perpage:this.state.perpage})
-    
     })
       
   }
+
+ 
+
+  showModal(){
+    this.setState({
+      viewImages:false,
+      viewModal:true
+    })
+  }
+
     render() {
         return (
           <>
         <div className="content-body">
-            <ul>
-           {this.state.urls.map(function(item,index){
-             return <Images key={index} url={item}/>
-           })}
-            </ul>
+            
+          <div class="column">
+            {this.state.urls.map(function(item,index){
+                if(index%4 === 0){
+                  return <Images key={index} url={item}/>
+                }
+              })
+            }
+          </div>
+
+          <div class="column">
+            {this.state.urls.map(function(item,index){
+                if(index%4 === 1){
+                  return <Images key={index} url={item}/>
+                }
+              })
+            }
+          </div>
+
+          <div class="column">
+            {this.state.urls.map(function(item,index){
+                if(index%4 === 2){
+                  return <Images key={index} url={item}/>
+                }
+              })
+            }
+          </div>
+
+          <div class="column">
+            {this.state.urls.map(function(item,index){
+                if(index%4 === 3){
+                  return <Images key={index} url={item}/>
+                }
+              })
+            }
+          </div>
+            
     </div> 
         </>
     );

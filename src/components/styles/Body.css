@@ -4,21 +4,10 @@
     padding: 75px 150px 60px 150px;
 }
 
-.content-body ul {
-    
-    column-count: 4;
-    padding: 0px;
-}
-
-.content-body ul li{
-    display: inline-block;
-    margin: 0 0 1em;
-    width: max-content;
-        /* width: max-content; 
-            background-color: #ffffff;
-            break-inside: avoid;
-    box-sizing: border-box;
-    padding: 10px; */
+.column{
+    display: flex;
+    width:30%;
+    flex-direction: column;
 }
 
 .image-size{

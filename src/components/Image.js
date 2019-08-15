@@ -10,9 +10,9 @@ class Image extends React.Component{
     
       return (
           <>
-          <li>
+          
           <img  className="image-size" src={this.props.url}/>
-          </li>
+          
         </>
     );
   }
