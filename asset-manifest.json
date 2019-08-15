@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/desafio-pinterest/static/css/main.43a06807.chunk.css",
-    "main.js": "/desafio-pinterest/static/js/main.db4cf954.chunk.js",
-    "main.js.map": "/desafio-pinterest/static/js/main.db4cf954.chunk.js.map",
+    "main.css": "/desafio-pinterest/static/css/main.faf0d4d1.chunk.css",
+    "main.js": "/desafio-pinterest/static/js/main.5fdb3df1.chunk.js",
+    "main.js.map": "/desafio-pinterest/static/js/main.5fdb3df1.chunk.js.map",
     "runtime~main.js": "/desafio-pinterest/static/js/runtime~main.9cc5fae6.js",
     "runtime~main.js.map": "/desafio-pinterest/static/js/runtime~main.9cc5fae6.js.map",
-    "static/js/2.86302cab.chunk.js": "/desafio-pinterest/static/js/2.86302cab.chunk.js",
-    "static/js/2.86302cab.chunk.js.map": "/desafio-pinterest/static/js/2.86302cab.chunk.js.map",
+    "static/js/2.ffa84700.chunk.js": "/desafio-pinterest/static/js/2.ffa84700.chunk.js",
+    "static/js/2.ffa84700.chunk.js.map": "/desafio-pinterest/static/js/2.ffa84700.chunk.js.map",
     "index.html": "/desafio-pinterest/index.html",
-    "precache-manifest.d33d745789cdad4ffbe608f0ebd497e2.js": "/desafio-pinterest/precache-manifest.d33d745789cdad4ffbe608f0ebd497e2.js",
+    "precache-manifest.2c74618be8aca88429bc9e0ee5a40299.js": "/desafio-pinterest/precache-manifest.2c74618be8aca88429bc9e0ee5a40299.js",
     "service-worker.js": "/desafio-pinterest/service-worker.js",
-    "static/css/main.43a06807.chunk.css.map": "/desafio-pinterest/static/css/main.43a06807.chunk.css.map",
+    "static/css/main.faf0d4d1.chunk.css.map": "/desafio-pinterest/static/css/main.faf0d4d1.chunk.css.map",
     "static/media/logo.svg": "/desafio-pinterest/static/media/logo.84d16ae0.svg"
   }
 }
