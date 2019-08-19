@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import './styles/Body.css';
 
@@ -12,12 +12,13 @@ class Image extends React.Component{
     
       return (
           <>
-               <Link to={{
-                pathname: "/pin/"+this.props.id,
-                state: { tags: this.props.tags, url: this.props.url , ola:"olaa" }
-                }}>
-          <img  className="image-size" src={this.props.url} alt={this.props.url}/>
+          <div class="image-div">
+          <Link to={{pathname: "/pin/"+this.props.id,state: { tags: this.props.tags, url: this.props.url, pageUrl: this.props.pageUrl }
+            }}>
+            <img  className="image-size" src={this.props.url} alt={this.props.url}/>
           </Link>
+          <span class="image-span">...</span>
+          </div>
         </>
     );
   }

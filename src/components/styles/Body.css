@@ -1,6 +1,7 @@
+
+
 .content-body{
     display: flex;
-   
     padding: 75px 150px 60px 150px;
 }
 
@@ -11,10 +12,26 @@
 }
 
 .image-size{
+    cursor:zoom-in;
     width: 230px;
     height: auto;
     border-radius:8px;
-    margin:10px;
+}
+.image-div{
+    margin:4px;
+    padding:6px 6px 30px 6px;
+}
+
+.image-span{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    color:#8d8d8d;
+    font-weight: bolder;
+}
+.image-div:hover{
+    background-color: #f2f2f2;
+    border-radius: 8px;
 }
 @media only screen and (max-width: 800px) {
     .content-body{

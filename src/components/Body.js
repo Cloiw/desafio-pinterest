@@ -58,53 +58,47 @@ class Body extends React.Component{
 
   
 
-    render() {
-        return (
-          <>
+  render() {
+    return (
+      <>
         <div className="content-body">
-            
+
           <div className="column">
             {this.state.images.map(function(item,index){
-                if(index%4 === 0){
-                  return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL}/>
-                }
-              })
-            }
+              if(index%4 === 0){
+                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+              }
+            })}
           </div>
 
           <div className="column">
             {this.state.images.map(function(item,index){
-                if(index%4 === 1){
-                  return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL}/>
-                }
-              })
-            }
+              if(index%4 === 1){
+                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+              }
+            })}
           </div>
 
           <div className="column">
             {this.state.images.map(function(item,index){
-                if(index%4 === 2){
-                  return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL}/>
-                }
-              })
-            }
+              if(index%4 === 2){
+                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+              }
+            })}
           </div>
 
           <div className="column">
             {this.state.images.map(function(item,index){
-                if(index%4 === 3){
-                  return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL}/>
-                }
-              
-              })
-            }
+              if(index%4 === 3){
+                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+              }
+            })}
           </div>
-            
-    </div> 
-        </>
+        </div> 
+      </>
     );
   }
-}
+};
 
 export default Body;
 

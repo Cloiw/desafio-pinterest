@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import Modal from './components/Modal'
 import * as serviceWorker from './serviceWorker';
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
+
 
 const routing = (
     <Router>
