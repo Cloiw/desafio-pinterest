@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c92b092569a0c1b564ae802d8d59c51",
+    "revision": "2ea085f92c7d5c04d92c5e39f7430108",
     "url": "/desafio-pinterest/index.html"
   },
   {
-    "revision": "90f49d3728726e3a7103",
-    "url": "/desafio-pinterest/static/css/main.894300df.chunk.css"
+    "revision": "a3071f339b080298c764",
+    "url": "/desafio-pinterest/static/css/main.60362678.chunk.css"
   },
   {
-    "revision": "45d47989cbd88c95ef87",
-    "url": "/desafio-pinterest/static/js/2.1aaa186c.chunk.js"
+    "revision": "62d6e492e9ea4870b66a",
+    "url": "/desafio-pinterest/static/js/2.ffa84700.chunk.js"
   },
   {
-    "revision": "90f49d3728726e3a7103",
-    "url": "/desafio-pinterest/static/js/main.9f69079f.chunk.js"
+    "revision": "a3071f339b080298c764",
+    "url": "/desafio-pinterest/static/js/main.9ba747b7.chunk.js"
   },
   {
     "revision": "09f0edb94085fd85ba11",
