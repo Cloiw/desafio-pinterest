@@ -11,7 +11,10 @@ class Body extends React.Component{
     this.handleScroll = this.handleScroll.bind(this);
     this.loadingImages = false;
     this.currentPage = 1;
+  
   }
+
+  
 
   handleScroll(){
     const docHeight = document.body.offsetHeight
@@ -59,39 +62,45 @@ class Body extends React.Component{
   
 
   render() {
+    
     return (
+      
       <>
         <div className="content-body">
 
           <div className="column">
-            {this.state.images.map(function(item,index){
+            {this.state.images.map((item,index)=>{
+              
               if(index%4 === 0){
-                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+                return <Images  scroll={window.scrollY} tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
               }
+              return []
             })}
           </div>
 
           <div className="column">
-            {this.state.images.map(function(item,index){
+            {this.state.images.map((item,index)=>{
               if(index%4 === 1){
-                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+                return <Images scroll={window.scrollY} tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
               }
+              return [];
             })}
           </div>
 
           <div className="column">
-            {this.state.images.map(function(item,index){
+            {this.state.images.map((item,index)=>{
               if(index%4 === 2){
-                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+                return <Images scroll={window.scrollY} tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
               }
+              return []
             })}
           </div>
 
           <div className="column">
-            {this.state.images.map(function(item,index){
+            {this.state.images.map((item,index)=>{
               if(index%4 === 3){
-                return <Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
-              }
+                return <Images scroll={window.scrollY} tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/>
+              }return []
             })}
           </div>
         </div> 

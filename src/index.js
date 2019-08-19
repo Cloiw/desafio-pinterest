@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Navbar from './components/Navbar'
 import './index.css';
 import App from './App';
 import Modal from './components/Modal'
@@ -8,10 +9,14 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 
 const routing = (
-    <Router>
-    <div>
+  
+   
+    <Router basename="/desafio-pinterest">
+    <div> 
+      <Navbar/>
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" 
+          render={(props) => <App {...props} data={props} />} />
         <Route path="/pin"
         render={(props) => <Modal {...props} data={props} />}/>
         {/* <Route component={Notfound} /> */}

@@ -16,11 +16,12 @@ class Modal extends React.Component{
     
       return (
           <>
+          {console.log(this.props.location)}
           <div className="modal-content">
             <div className="left-col">
             <div className="left-icon-row">
-                <Link to="/">
-                    <img className="back-icon" src={backIcon} />
+                <Link to={{pathname: "/",state: {scroll: this.props.location.scrollPosition}}}>
+                    <img alt="Volver" className="back-icon" src={backIcon} />
                 </Link>
               </div>
             </div>
@@ -37,7 +38,7 @@ class Modal extends React.Component{
             <div className="right-col">
               <div className="right-icon-row">
                 <Link to="/">
-                    <img className="close-icon" src={closeIcon} />
+                    <img alt="Cerrar" className="close-icon" src={closeIcon} />
                 </Link>
               </div>
             </div>

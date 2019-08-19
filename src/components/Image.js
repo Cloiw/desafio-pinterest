@@ -12,12 +12,12 @@ class Image extends React.Component{
     
       return (
           <>
-          <div class="image-div">
-          <Link to={{pathname: "/pin/"+this.props.id,state: { tags: this.props.tags, url: this.props.url, pageUrl: this.props.pageUrl }
+          <div className="image-div">
+          <Link to={{pathname: "/pin/"+this.props.id,state: { tags: this.props.tags, url: this.props.url, pageUrl: this.props.pageUrl, scrollPosition:this.props.scroll }
             }}>
             <img  className="image-size" src={this.props.url} alt={this.props.url}/>
           </Link>
-          <span class="image-span">...</span>
+          <span className="image-span">...</span>
           </div>
         </>
     );
