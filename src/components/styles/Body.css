@@ -14,4 +14,13 @@
     width: 230px;
     height: auto;
     border-radius:8px;
+    margin:10px;
+}
+@media only screen and (max-width: 800px) {
+    .content-body{
+        display: block;
+    }
+      
+    
+   
 }
