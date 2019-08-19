@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import closeIcon from '../img/close_icon.png'
 import backIcon from '../img/back_icon.png'
 import './styles/Modal.css';
@@ -16,7 +16,6 @@ class Modal extends React.Component{
     
       return (
           <>
-          {console.log(this.props.location)}
           <div className="modal-content">
             <div className="left-col">
             <div className="left-icon-row">
