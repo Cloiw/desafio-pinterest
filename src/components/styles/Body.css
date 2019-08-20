@@ -5,7 +5,9 @@
     padding: 75px 150px 60px 150px;
 }
 .content-body-modal{
-    overflow:scroll;}
+    overflow:scroll;
+}
+
 
 button{
     background: none;

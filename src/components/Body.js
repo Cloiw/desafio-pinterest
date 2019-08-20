@@ -1,20 +1,18 @@
 import React from 'react';
-import Images from './Image'
-import Modals from './Modals'
+import Images from './Image';
+import Modals from './Modals';
 import './styles/Body.css';
 
 
-
 class Body extends React.Component{ 
-  constructor(){
+  constructor() {
     super();
     this.state = {images : [],urls : [],show:false};
     this.handleScroll = this.handleScroll.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.loadingImages = false;
     this.currentPage = 1;
-  
-  }
+  };
 
   
 
@@ -61,13 +59,13 @@ class Body extends React.Component{
 
  
 showModal = (index) => {
-  document.body.style.overflow = "hidden";
+  document.body.style.overflowY = "hidden";
 
   this.setState({ show: index });
 };
 
 hideModal = () => {
-  document.body.style.overflow = "scroll";
+  document.body.style.overflowY = "scroll";
   this.setState({ show: false });
 };
 
@@ -110,7 +108,7 @@ hideModal = () => {
                 return <div key={index+"div"}><button key={index+"a"} onClick={()=> this.showModal(index)}><Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/></button>
                 <Modals hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL}/></div>
               }
-              return []
+              return [];
             })}
           </div>
 
@@ -119,7 +117,7 @@ hideModal = () => {
               if(index%4 === 3){
                 return <div key={index+"div"}><button key={index+"a"} onClick={()=> this.showModal(index)}><Images tags={item.tags} id={item.id} key={index} url={item.largeImageURL} pageUrl={item.pageURL}/></button>
                 <Modals hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL}/></div>
-              }return []
+              }return [];
             })}
           </div>
         </div> 
