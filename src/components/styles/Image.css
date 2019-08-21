@@ -1,0 +1,46 @@
+.show-save-button{
+    position: absolute;
+    margin:5px 5px 0px 121.5px; 
+}
+
+.save-icon{
+    border-radius: 8px;
+}
+
+.image-size{
+    cursor:zoom-in;
+    width: 230px;
+    height: auto;
+    border-radius:8px;
+}
+
+.image-div{
+    margin:4px;
+    padding:6px 6px 10px 6px;
+}
+
+.flex-dots{
+    display:flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.image-dots{
+    margin-top:2px;
+    width:16px;
+    height:14px;
+    padding:4px;
+    color:#8d8d8d;
+    font-weight: bolder;
+}
+.hide-save-button{
+    display:none;
+}
+.image-dots:hover{
+    border-radius: 100px;
+    background-color:  rgba(0, 0, 0, .05);
+}
+.image-div:hover{
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
