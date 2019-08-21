@@ -50,3 +50,9 @@
     filter: brightness(60%);
     z-index: 0;
 }
+
+@media only screen and (max-width: 800px) {
+    .show-save-button{
+        display:none;
+    }
+}

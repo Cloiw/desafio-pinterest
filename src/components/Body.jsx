@@ -43,7 +43,6 @@ class Body extends React.Component {
 
   showModal = (index) => {
     document.body.style.overflowY = 'hidden';
-
     this.setState({ show: index });
   };
 
