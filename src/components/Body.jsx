@@ -72,9 +72,9 @@ class Body extends React.Component {
                 return (
                   <div key={`${item.id}div`}>
                     <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images tags={item.tags} key={item.id} url={item.largeImageURL} />
+                      <Images key={item.id} url={item.largeImageURL} />
                     </button>
-                    <Modals hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
+                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
                   </div>
                 );
               }
@@ -87,9 +87,9 @@ class Body extends React.Component {
                 return (
                   <div key={`${item.id}div`}>
                     <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images tags={item.tags} key={item.id} url={item.largeImageURL} />
+                      <Images key={item.id} url={item.largeImageURL} />
                     </button>
-                    <Modals hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
+                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
                   </div>
                 );
               }
@@ -102,9 +102,9 @@ class Body extends React.Component {
                 return (
                   <div key={`${item.id}div`}>
                     <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images tags={item.tags} key={item.id} url={item.largeImageURL} />
+                      <Images key={item.id} url={item.largeImageURL} />
                     </button>
-                    <Modals hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
+                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
                   </div>
                 );
               }
@@ -117,9 +117,9 @@ class Body extends React.Component {
                 return (
                   <div key={`${item.id}div`}>
                     <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images tags={item.tags} key={item.id} url={item.largeImageURL} />
+                      <Images key={item.id} url={item.largeImageURL} />
                     </button>
-                    <Modals hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
+                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
                   </div>
                 );
               }
