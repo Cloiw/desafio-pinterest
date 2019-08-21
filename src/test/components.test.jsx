@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { Enzyme, shallow } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 import Image from '../components/Image';
 import Navbar from '../components/Navbar';
 import App from '../App';
 
-Enzyme.configure({ adapter: new Adapter() });
-
+configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -32,7 +31,6 @@ it('renders without crashing', () => {
   );
   ReactDOM.unmountComponentAtNode(div);
 });
-
 
 it('se renderea correctamente el componente Navbar', () => {
   const component = shallow(<Navbar />);
