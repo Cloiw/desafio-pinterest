@@ -10,6 +10,16 @@ module.exports = {
       "parser": "babel-eslint",
       "env": {
         "jest": true,
+      },
+      "globals":{
+        "fetch": true,
+        "window": true,
+        "document": true
+      },
+      "rules":{
+        "max-len": "off",
+        "react/destructuring-assignment": "off",
+        "react/prop-types": "off"
       }
     
 };

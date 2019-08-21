@@ -12,8 +12,8 @@
 }
 
 .scroll{
-   overflow:auto;
-  height: 91%;
+  overflow:auto;
+  height: 92%;
   width: 100%;
   position:fixed;
 }
@@ -21,6 +21,7 @@
 .image{
   background-color: white;
   border-radius: 8px;
+  box-shadow :rgb(212, 211, 211) 0px 4px 4px;
 }
 
 .left-col,.center-col,.right-col,.image-col,.info-col{
@@ -40,12 +41,16 @@
 }
 
 .left-col,.right-col,.center-col{
-  margin-top:16px;
+  margin-top:32px;
   flex:1
 }
 
+.right-col{
+  margin-top:16px;
+}
+
 .center-col{
-  flex:5
+  flex:5;
 }
 
 .right-icon-row > button:hover,.left-icon-row > button:hover {
@@ -78,33 +83,29 @@
   justify-content: flex-start;
 }
 
-
-
-
-
-
-
-
-
-
-
 .modal-img{
+  border-radius: 8px;
   width: 90%;
-  margin:40px 20px 100px 20px;
-  box-shadow :rgb(238, 238, 238) 0px 4px 4px;
+  margin:72px 24px 24px 24px;
   font-size:12px;
 }
 
   
-  
-  .modal-display-block {
-    display: block;
-  }
-  
-  .display-none {
-    display: none;
-  }
+.modal-display-block {
+  display: block;
+}
 
+.display-none {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+ 
+  .scroll{
+    overflow:auto;
+    height: 94%;
+  }
+}
 
  
 
