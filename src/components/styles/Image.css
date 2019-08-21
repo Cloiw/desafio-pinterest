@@ -1,6 +1,7 @@
 .show-save-button{
     position: absolute;
-    margin:5px 5px 0px 121.5px; 
+    margin:5px 5px 0px 121.5px;
+    z-index: 1;
 }
 
 .save-icon{
@@ -43,4 +44,9 @@
 .image-div:hover{
     background-color: #f2f2f2;
     border-radius: 8px;
+}
+.image-div:hover > img{
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+    z-index: 0;
 }
