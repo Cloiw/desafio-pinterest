@@ -9,6 +9,7 @@ class Body extends React.Component {
     this.state = { images: [], show: false };
     this.handleScroll = this.handleScroll.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    this.showImages = this.showImages.bind(this);
     this.loadingImages = false;
     this.currentPage = 1;
   }
@@ -51,6 +52,17 @@ class Body extends React.Component {
     this.setState({ show: false });
   };
 
+  showImages(item, index) {
+    return (
+      <div key={`${item.id}div`}>
+        <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
+          <Images key={item.id} url={item.largeImageURL} />
+        </button>
+        <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
+      </div>
+    );
+  }
+
   handleScroll() {
     const docHeight = document.body.offsetHeight;
     const windowBottom = window.innerHeight + window.scrollY;
@@ -68,14 +80,7 @@ class Body extends React.Component {
           <div className="column">
             {this.state.images.map((item, index) => {
               if (index % 4 === 0) {
-                return (
-                  <div key={`${item.id}div`}>
-                    <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images key={item.id} url={item.largeImageURL} />
-                    </button>
-                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
-                  </div>
-                );
+                return this.showImages(item, index);
               }
               return [];
             })}
@@ -83,14 +88,7 @@ class Body extends React.Component {
           <div className="column">
             {this.state.images.map((item, index) => {
               if (index % 4 === 1) {
-                return (
-                  <div key={`${item.id}div`}>
-                    <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images key={item.id} url={item.largeImageURL} />
-                    </button>
-                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
-                  </div>
-                );
+                return this.showImages(item, index);
               }
               return [];
             })}
@@ -98,14 +96,7 @@ class Body extends React.Component {
           <div className="column">
             {this.state.images.map((item, index) => {
               if (index % 4 === 2) {
-                return (
-                  <div key={`${item.id}div`}>
-                    <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images key={item.id} url={item.largeImageURL} />
-                    </button>
-                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
-                  </div>
-                );
+                return this.showImages(item, index);
               }
               return [];
             })}
@@ -113,14 +104,7 @@ class Body extends React.Component {
           <div className="column">
             {this.state.images.map((item, index) => {
               if (index % 4 === 3) {
-                return (
-                  <div key={`${item.id}div`}>
-                    <button type="button" key={`${item.id}button`} onClick={() => this.showModal(index)}>
-                      <Images key={item.id} url={item.largeImageURL} />
-                    </button>
-                    <Modals tags={item.tags} hideModal={this.hideModal} show={this.state.show === index} id={index} url={item.largeImageURL} />
-                  </div>
-                );
+                return this.showImages(item, index);
               }
               return [];
             })}
