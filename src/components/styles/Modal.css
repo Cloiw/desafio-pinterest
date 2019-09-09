@@ -7,84 +7,99 @@
   z-index: 2;
 }
 
-.modal-main,.left-col,.center-col,.right-col,.image,.scroll{
+.modal-main,
+.left-col,
+.center-col,
+.right-col,
+.image,
+.scroll {
   display: flex;
   background-color:  #f2f2f2;
 }
 
-.scroll{
+.scroll {
   overflow:auto;
   height: 92%;
   width: 100%;
   position:fixed;
 }
 
-.image{
+.image {
   background-color: white;
   border-radius: 8px;
   box-shadow :rgb(212, 211, 211) 0px 4px 4px;
 }
 
-.left-col,.center-col,.right-col,.image-col,.info-col{
+.left-col,
+.center-col,
+.right-col,
+.image-col,
+.info-col {
   flex-direction: column;
 }
 
-.info-col{
+.info-col {
   margin-top:60px;
   font-weight: bolder;
   flex:1
 }
 
-.image-col{
+.image-col {
   display: flex;
   align-items: center;
   flex:2;
 }
 
-.left-col,.right-col,.center-col{
+.left-col,
+.right-col,
+.center-col {
   margin-top:32px;
   flex:1
 }
 
-.right-col{
+.right-col {
   margin-top:16px;
 }
 
-.center-col{
+.center-col {
   flex:5;
 }
 
-.right-icon-row > button:hover,.left-icon-row > button:hover {
+.right-icon-row > button:hover,
+.left-icon-row > button:hover {
   border-radius: 100px;
   background-color:  rgba(0, 0, 0, .05);
 }
 
-.close-icon,.back-icon{
+.close-icon,
+.back-icon {
   width: 16px;
   padding: 16px;
 }
 
-.back-icon{
+.back-icon {
   width:20px;
   padding: 16px;
 }
 
-.right-icon-row,.left-icon-row{
+.right-icon-row,
+.left-icon-row {
   display: flex;
   justify-content: flex-end;
 }
 
-.right-icon-row > button,.left-icon-row > button {
+.right-icon-row > button,
+.left-icon-row > button {
   margin-right:16px;
   margin-left:16px;
   display: inline; 
 }
 
-.left-icon-row{
+.left-icon-row {
   justify-content: flex-start;
 }
 
-.modal-img{
+.modal-img {
   border-radius: 8px;
   width: 92%;
   margin:72px 24px 50px 24px;
@@ -101,7 +116,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .scroll{
+  .scroll {
     overflow:auto;
     height: 94%;
   }

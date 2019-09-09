@@ -10,6 +10,42 @@ import App from '../App';
 
 configure({ adapter: new Adapter() });
 
+describe('<Image />', () => {
+  let shallowComp;
+  beforeEach(() => {
+    const props = {
+      key: 1,
+      url: 'https://pixabay.com/get/57e8dd404c57a414f6da8c7dda79367d163fdaec5a526c48702973d4934ac35db0_1280.jpg',
+    };
+
+    shallowComp = shallow(<Image url={props.url} />);
+  });
+
+  test('deberia renderea 3imgs, save, dots e img', () => {
+    const imgResult = shallowComp.find('img');
+    expect(imgResult).toHaveLength(3);
+  });
+
+  test('deberia simular el evento hover y cambiar la clase', () => {
+    shallowComp.find('.image-div').simulate('mouseEnter');
+    const resultHover = shallowComp.find('.show-save-button');
+    expect(resultHover).toHaveLength(1);
+  });
+});
+
+
+describe('<Navbar/>', () => {
+  let shallowComp;
+  beforeEach(() => {
+    shallowComp = shallow(<Navbar />);
+  });
+
+  test('deberia tener dos span', () => {
+    const result = shallowComp.find('span');
+    expect(result).toHaveLength(2);
+  });
+});
+
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
