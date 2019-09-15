@@ -1,17 +1,15 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true,
     },
     "extends": "airbnb",
     "plugins": [
         "react"
       ],
-      "parser": "babel-eslint",
-      "env": {
-        "jest": true,
-      },
-      "globals":{
+     "parser": "babel-eslint",
+     "globals":{
         "fetch": true,
         "window": true,
         "document": true
@@ -21,5 +19,4 @@ module.exports = {
         "react/destructuring-assignment": "off",
         "react/prop-types": "off"
       }
-    
 };
